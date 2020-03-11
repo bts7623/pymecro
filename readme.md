@@ -119,3 +119,20 @@
       - 잘 모르겠느데 action chains들을 build를 먼저 호출하지 않고 작업 수행
 - 참고링크
   - [selenium docs action chains](https://www.selenium.dev/selenium/docs/api/py/webdriver/selenium.webdriver.common.action_chains.html)
+
+#### #Selenium2
+- 단일 element 접근 method
+  - find_element_by_name('HTML_name')
+  - find_element_by_id('HTML_id')
+  - find_element_by_xpath('/html/body/some/xpath')
+  - find_element_by_css_selector('#css > div.selector')
+  - find_element_by_class_name('some_class_name')
+  - find_element_by_tag_name('h1')
+- 여러 elements에 접근하는 method(대부분 element를 elements로 바꾸면 된다)
+  - find_elements_by_css_selector('#css > div.selector')
+  
+#### #실전 테스트(create mecro)
+- 첫번째 오류
+  - webdriver import가 안되는 오류
+  - stackoverflow 답변: 파일이름이 selenium인 것을 지우고, pyc도 지워라.
+  - 내 파일 중 selenium.py 파일이 있어서 지웠고, 폴더에 생성된 pyc폴더도 지우니 됨
